@@ -23,7 +23,7 @@ const each = (fn: (key: string, app: AppType) => void) => {
   apps.forEach((key) => fn(key, config[key]));
 };
 const check = (flag: string, run: () => void) => {
-  if (argKeys.includes(`--${flag}`)) run();
+  if (argKeys.includes(flag)) run();
 };
 
 check('clean', () => {

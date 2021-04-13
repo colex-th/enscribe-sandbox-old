@@ -39,7 +39,7 @@
     "checkout": "ts-node src/index.ts --checkout",
     "branch": "ts-node src/index.ts --branch",
     "delete": "ts-node src/index.ts --delete",
-    "dev": "concurrently \"yarn --cwd ./firebase dev\" \"yarn --cwd ./ui dev\"",
+    "dev": "concurrently \"yarn --cwd ./firebase dev --project=enscribe --import=../seeds\" \"yarn --cwd ./ui dev\"",
     "lint": "eslint . --ext .js,.ts --fix",
     "prettify": "prettier . --write",
     "lp": "yarn lint && yarn prettify"
