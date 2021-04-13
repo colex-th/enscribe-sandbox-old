@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "path": "firebase"
+    },
+    {
+      "path": "ui"
+    },
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "terminal.integrated.cwd": ".",
+    "eslint.workingDirectories": [".", "./firebase", "./ui"],
+    "eslint.packageManager": "yarn"
+  }
+}
