@@ -29,13 +29,7 @@
     "sort-imports": "off",
     "import/first": "error",
     "import/newline-after-import": "error",
-    "import/no-duplicates": "error",
-    "@typescript-eslint/no-empty-function": [
-      "error",
-      {
-        "allow": ["arrowFunctions"]
-      }
-    ]
+    "import/no-duplicates": "error"
   },
   "overrides": [
     {
@@ -45,6 +39,14 @@
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "ecmaFeatures": {}
+      },
+      "rules": {
+        "@typescript-eslint/no-empty-function": [
+          "error",
+          {
+            "allow": ["arrowFunctions"]
+          }
+        ]
       }
     }
   ]
