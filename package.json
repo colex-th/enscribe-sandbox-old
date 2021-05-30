@@ -1,5 +1,26 @@
 {
   "name": "enscribe-sandbox",
+  "workspaces": [
+    "firebase",
+    "ui"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "foreach": "git submodule foreach",
+    "ui": "yarn workspace enscribe-ui",
+    "fb": "yarn workspace enscribe-firebase",
+    "dev": "concurrently \"yarn --cwd ./firebase dev --project=enscribe --import=../seeds\" \"yarn --cwd ./ui dev\"",
+    "lint": "eslint . --ext .js,.ts --fix",
+    "prettify": "prettier . --write",
+    "lp": "yarn lint && yarn prettify",
+    "clean": "ts-node src/index.ts --clean",
+    "download": "ts-node src/index.ts --download",
+    "build": "ts-node src/index.ts --build",
+    "checkout": "ts-node src/index.ts --checkout",
+    "branch": "ts-node src/index.ts --branch",
+    "delete": "ts-node src/index.ts --delete"
+  },
+  "private": true,
   "version": "1.0.0",
   "main": "src/index.ts",
   "repository": "git@github.com:colex-th/enscribe-sandbox.git",
@@ -30,18 +51,5 @@
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3",
     "yargs": "^16.2.0"
-  },
-  "scripts": {
-    "prepare": "husky install",
-    "clean": "ts-node src/index.ts --clean",
-    "download": "ts-node src/index.ts --download",
-    "build": "ts-node src/index.ts --build",
-    "checkout": "ts-node src/index.ts --checkout",
-    "branch": "ts-node src/index.ts --branch",
-    "delete": "ts-node src/index.ts --delete",
-    "dev": "concurrently \"yarn --cwd ./firebase dev --project=enscribe --import=../seeds\" \"yarn --cwd ./ui dev\"",
-    "lint": "eslint . --ext .js,.ts --fix",
-    "prettify": "prettier . --write",
-    "lp": "yarn lint && yarn prettify"
   }
 }
