@@ -1,14 +1,8 @@
 {
   "name": "enscribe-sandbox",
-  "workspaces": [
-    "firebase",
-    "ui"
-  ],
   "scripts": {
     "prepare": "husky install",
     "foreach": "git submodule foreach",
-    "ui": "yarn workspace enscribe-ui",
-    "fb": "yarn workspace enscribe-firebase",
     "seed": ". ./seed.sh",
     "dev": "concurrently \"yarn --cwd ./firebase dev --project=enscribe --import=../firestore-import --export-on-exit\" \"yarn --cwd ./ui dev\"",
     "lint": "eslint . --ext .js,.ts --fix",
