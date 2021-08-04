@@ -46,6 +46,10 @@ check('checkout', () => {
   each((key) => cmd(`git checkout ${argv.checkout}`, key));
 });
 
+check('pull', () => {
+  each((key) => cmd(`git pull`, key));
+});
+
 check('branch', () => {
   each((key) => cmd(`git checkout -b ${argv.branch}`, key));
 });
