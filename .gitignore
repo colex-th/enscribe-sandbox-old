@@ -116,3 +116,6 @@ dist
 .pnp.*
 
 firestore-import/
+
+# git submodule
+*.diff
