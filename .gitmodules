@@ -1,6 +1,8 @@
 [submodule "firebase"]
 	path = firebase
 	url = ../enscribe-firebase.git
+	branch = main
 [submodule "ui"]
 	path = ui
 	url = ../enscribe-ui.git
+	branch = main
