@@ -1,6 +1,6 @@
 [submodule "firebase"]
 	path = firebase
-	url = git@github.com:colex-th/enscribe-firebase.git
+	url = ../enscribe-firebase.git
 [submodule "ui"]
 	path = ui
-	url = git@github.com:colex-th/enscribe-ui.git
+	url = ../enscribe-ui.git

@@ -12,7 +12,7 @@
     "download": "ts-node src/index.ts --download",
     "build": "ts-node src/index.ts --build",
     "checkout": "ts-node src/index.ts --checkout",
-    "pull": "ts-node src/index.ts --pull",
+    "pull": "git submodule update --init",
     "branch": "ts-node src/index.ts --branch",
     "delete": "ts-node src/index.ts --delete"
   },
